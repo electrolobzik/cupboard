@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nl.qbusict.cupboard.example">
+
+<uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name" >
+        <activity
+            android:name="BookActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ContactsActivity"
+            android:label="@string/contacts_demo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="nl.qbusict.cupboard.example.content.BooksContentProvider"
+            android:authorities="nl.qbusict.cupboard.example.provider"
+            android:exported="false" >
+        </provider>
+    </application>
+
+</manifest>
